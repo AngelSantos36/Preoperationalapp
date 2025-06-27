@@ -1,7 +1,7 @@
 // Lista de administradores con cédula y contraseña
 const adminCredenciales = [
   { cedula: '123456', password: 'admin123' },
-  { cedula: 'admin01', password: 'clave2025' }
+  { cedula: '567890', password: 'clave2025' }
 ];
 
 // Verifica si la cédula es de un administrador y muestra el campo de contraseña
