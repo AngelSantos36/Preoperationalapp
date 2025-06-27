@@ -48,12 +48,27 @@ function login() {
   limpiarCamposLogin();
 }
 
-// Muestra solo la pantalla que se indica
+// Muestra solo la pantalla que se indica y ajusta clases
 function showScreen(screenId) {
   const screens = ['login-screen', 'home-user', 'home-admin', 'register-screen'];
+
   screens.forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.style.display = (id === screenId) ? 'block' : 'none';
+    if (!el) return;
+
+    if (id === screenId) {
+      el.style.display = 'block';
+
+      if (id === 'login-screen') {
+        el.classList.remove('scrollable');
+        el.classList.add('centered');
+      } else if (id === 'register-screen') {
+        el.classList.remove('centered');
+        el.classList.add('scrollable');
+      }
+    } else {
+      el.style.display = 'none';
+    }
   });
 }
 
