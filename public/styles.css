@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(-45deg, #111542, #0d1f5e, #1c3e77, #178ec8);
+  background: linear-gradient(-45deg, #111542, #081e6d, #2d508d, #178ec8);
   background-size: 400% 400%;
   animation: fondoAzul 15s ease infinite;
   overflow: hidden;
