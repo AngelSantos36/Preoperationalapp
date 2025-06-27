@@ -90,3 +90,7 @@ function limpiarCamposLogin() {
   pass.value = '';
   pass.style.display = 'none';
 }
+
+function soloNumeros(input) {
+  input.value = input.value.replace(/\D/g, '');
+}
