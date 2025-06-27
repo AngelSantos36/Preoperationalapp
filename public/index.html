@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSZFORD</title>
+  <link rel="icon" href="/img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="/img/logo.png" alt="Logo OSZFORD" class="header-logo" />
+  </header>
+
+  <!-- App -->
+  <div id="app">
+    <!-- Login -->
+    <div id="login-screen" class="form-container centered">
+      <div class="form-box">
+        <p class="login-titulo">BIENVENIDO<br><span>Identifícate</span></p>
+        <input type="text" id="cedula" placeholder="Cédula" oninput="checkAdminCedula()"/>
+        <input type="password" id="password" placeholder="Contraseña" style="display: none;" />
+        <button onclick="login()">Inicio de Sesión</button>
+      </div>
+    </div>
+
+    <!-- Home Usuario -->
+    <div id="home-user" style="display: none;">
+      <div class="user-home">
+        <button class="icon-button" onclick="alert('Abriendo formulario preoperacional')">
+          <img src="/img/Formulario.png" alt="Formulario" />
+          <span>Formulario Preoperacional</span>
+        </button>
+      </div>
+      <div style="text-align: center;">
+        <button onclick="showLogin()" class="cerrar-sesion">Cerrar Sesión</button>
+      </div>
+    </div>
+
+    <!-- Home Administrador -->
+    <div id="home-admin" style="display: none;">
+      <div class="admin-grid">
+        <div class="admin-option" onclick="alert('Ir a Reportes')">
+          <img src="/img/Reporte.png" alt="Reportes" />
+          <span>Reportes</span>
+        </div>
+        <div class="admin-option" onclick="alert('Ir a Estadísticas')">
+          <img src="/img/estadisticas.png" alt="Estadísticas" />
+          <span>Estadísticas</span>
+        </div>
+        <div class="admin-option" onclick="alert('Modificar Usuarios')">
+          <img src="/img/Modificarusuarios.png" alt="Modificar" />
+          <span>Modificar Usuarios</span>
+        </div>
+        <div class="admin-option" onclick="showRegister()">
+          <img src="/img/Crearusuarios.png" alt="Crear" />
+          <span>Crear Usuarios</span>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <button onclick="showLogin()" class="cerrar-sesion">Cerrar Sesión</button>
+      </div>
+    </div>
+
+    <!-- Registro -->
+    <div id="register-screen" class="form-container scrollable" style="display: none;">
+      <div class="form-box large-form">
+        <p class="titulo-registro">Registro Nuevo Colaborador</p>
+        <input type="text" placeholder="PIN (Código Interno)" />
+        <input type="text" placeholder="Nombre Completo" />
+        <input type="text" placeholder="Cargo" />
+        <input type="text" placeholder="Categoría Licencia de Conducción" />
+        <label class="input-label">Vencimiento Licencia</label>
+        <input type="date" />
+        <label class="input-label">Vencimiento SOAT</label>
+        <input type="date" />
+        <label class="input-label">Vencimiento Tecno Mecánica</label>
+        <input type="date" />
+        <label class="input-label">Tipo de Vehículo</label>
+        <select>
+          <option value="" disabled selected>Seleccione</option>
+          <option value="carro">Carro</option>
+          <option value="moto">Moto</option>
+        </select>
+        <input type="text" placeholder="Placa del Vehículo" />
+        <button onclick="alert('Usuario registrado')">Crear Usuario</button>
+        <a href="#" onclick="showLogin()">Cerrar Sesion</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Derechos Reservados DevCSS 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
